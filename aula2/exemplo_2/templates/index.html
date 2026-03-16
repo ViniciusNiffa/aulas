@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação das variáveis</title>
+</head>
+<body>
+    <p>Imprimindo o valor das variáveis</p>
+    <p>Variável s = {{s}}</p>
+    <p>Variável n normal = {{decimal_normal}}</p>
+    <p>Variável s = {{decimal_8}}</p>
+    <p>Variável s = {{decimal_08}}</p>
+    <p>Variável float = {{decimal_float}}</p>
+    <p>Variável booleana = {{b}}</p>
+    <p>Variável booleana = {{f}}</p>
+    <p>###############################</p>
+    <p>Tipo da variável</p>
+    {% for chave, valor in tipos.items() %}
+    <p>{{ chave }} - {{ valor }}</p>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com funções</title>
+</head>
+<body>
+    <!-- Exibindo a mensagem -->
+    <h3>{{ mensagem}}</h3>
+    <hr>
+    <!-- Lista de alunos -->
+     <h3>Listas de alunos</h3>
+     {% for aluno in alunos %}
+        {{ aluno}}<br>
+     {% endfor %}
+     <hr>
+     <!-- Lista com o nome e a idade -->
+      <h3>Nome e idade</h3>
+      {% for pessoa in pessoas %}
+        {{ pessoa}}<br>
+      {% endfor %}
+      <hr>
+      <!-- Variável global b -->
+       <h3>Valor de b após a soma</h3>
+       {{ valor_b}}
+       <hr>
+       <!-- Resultado do calculo global -->
+        <h3>Resultado do calculo</h3>
+        {{ resultado_calculo }}
+</body>
+</html>

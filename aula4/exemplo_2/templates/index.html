@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com array</title>
+</head>
+<body>
+    <h1>Variável frutas1</h1>
+    <li>{{ frutas1[1]}}</li>
+    <li>{{ frutas1[2]}}</li>
+    <li>{{ frutas1[3]}}</li>
+
+    <pre>{{ frutas1}}</pre>
+
+    <h1>Variável frutas2</h1>
+    <li>{{ frutas2[0]}}</li>
+    <li>{{ frutas2[1]}}</li>
+    <li>{{ frutas2[2]}}</li>
+
+    <pre>{{ frutas2 }}</pre>
+    
+    <h1>Variável frutas3</h1>
+    <li>{{ frutas3[0]}}</li>
+    <li>{{ frutas3[1]}}</li>
+    <li>{{ frutas3[7]}}</li>
+    <li>{{ frutas3[8]}}</li>
+
+    <pre>{{ frutas3 }}</pre>
+
+    <br>
+    <h1>Variável frase que tem os valores de frutas4</h1>
+    {% for frase in frases %}
+        {{ frase }}<br>
+    {% endfor %}
+</body>
+</html>
