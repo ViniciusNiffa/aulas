@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função for</title>
+</head>
+<body>
+    <h2>Exemplo 1</h2>
+    {% for linha in linhas %}
+        {{ linha }}
+    {% endfor %}
+    <hr>
+    <h2>Exemplo 2 - Regressiva</h2>
+    {% for item in regressiva %}
+        {{ item }}<br>
+    {%endfor%}
+    <hr>
+    <h2>Exemplo 3 - Lista de nomes</h2>
+    {% for nome in lista_nomes %}
+        {{ nome }}<br>
+    {% endfor %}
+    <hr>
+    <h2>Exemplo 4 - Tabuada </h2>
+    {% for item in tabuada %}
+        {{ item }}<br>
+    {% endfor %}
+</body>
+</html>

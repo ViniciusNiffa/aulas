@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função while</title>
+</head>
+<body>
+    <h2>Exemplo 1 - Multiplicando por 2</h2>
+    {% for item in resultados %}
+        {{ item }}<br>
+    {% endfor %}
+    <hr>
+    <h2>Exemplo 2 - Contador</h2>
+    {% for item in contagem %}
+        {{ item }}<br>
+    {% endfor %}
+    <hr>
+    <h2>Exemplo 3 - Soma acumulativa</h2>
+    {% for item in soma_lista %}
+        {{ item }}<br>
+    {% endfor %}
+    <hr>
+    <h2>Exemplo 4 - While com break</h2>
+    {% for item in exemplo_break %}
+        {{ item }}
+    {% endfor %}
+</body>
+</html>
