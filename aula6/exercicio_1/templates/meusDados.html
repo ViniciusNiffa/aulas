@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrando os dados</title>
+</head>
+<body>
+    <h2>{{ mensagem }}</h2>
+    {% if nome and nasc and idade and endereco and bairro and cidade and estado and celular and email and cpf and rg %}
+        Seja bem vindo sr(a) {{ nome }} <br>
+        Sua data de nascimento é {{ nasc }} <br>
+        Sua idade é {{ idade }} <br>
+        Seu endereço é {{ endereco }} <br>
+        Seu bairro é {{ bairro }} <br>
+        Sua cidade é {{ cidade }} <br>
+        Seu estado é {{ estado }} <br>
+        Sua numero de telefone é {{ celular }} <br>
+        Seu email é {{ email }} <br>
+        Seu cpf é {{ cpf }} <br>
+        Seu rg é {{ rg }}
+    {% endif %}
+    <br>
+    <a href="/">Voltar</a>
+</body>
+</html>
