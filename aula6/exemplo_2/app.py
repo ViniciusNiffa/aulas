@@ -14,12 +14,10 @@ def index():
 @app.route("/dados")
 def dados():
     # Captura o valor enviado pelo campo "nome"
-    while idade <0 and nome=="" and idade == "":
-        nome = request.args.get("nome")
+
+    nome = request.args.get("nome")
         # Captura o valor enviado pelo campo "idade"
-        idade = request.args.get("idade")
-        if idade >0:
-            break
+    idade = request.args.get("idade")
     # Verificar se os dados foram enviados
     if nome and idade:
         mensagem = "Dados cadastrados com sucesso!"
