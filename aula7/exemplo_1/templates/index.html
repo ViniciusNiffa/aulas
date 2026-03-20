@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h2>Calculadora Web em Python</h2>
+    <!-- Formulário para a versão utilizando a função Match -->
+     <form action="/calculo_match" method="post">
+        <label>
+            Valor 1: <input type="number" name="num1" step="any">
+        </label> <br>
+        <label>
+            Valor 2: <input type="number" name="num2" step="any">
+        </label> <br>
+        <label>
+            Operação (+ - * /): <input type="text" name="operacao" size="2"> 
+        </label> <br>
+        <input type="submit" value="Calcular (Match-case)">
+     </form>
+     <hr>
+     <form action="/calculo_if" method="post">
+        <label>
+            Valor 1: <input type="number" name="num1" step="any">
+        </label> <br>
+        <label>
+            Valor 2: <input type="number" name="num2" step="any">
+        </label> <br>
+        <label>
+            Operação (+ - * /): <input type="text" name="operacao" size="2"> 
+        </label> <br>
+        <input type="submit" value="Calcular (if-else)">
+     </form>
+</body>
+</html>

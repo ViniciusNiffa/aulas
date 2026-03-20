@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situação Curricular</title>
+</head>
+<body>
+    <h2>Situação Curricular do {{ nome }}</h2>
+    Turma: {{ turma }} <br>
+    Nota 1: {{ n1 }} <br>
+    Nota 2: {{ n2 }} <br>
+    Nota 3: {{ n3 }} <br>
+    Nota 4: {{ n4 }} <br>
+    Média Final: {{ "%.2f"|format (media_final) }} <br>
+    Situação Curricular: {{ situacao }} <br>
+    <a href="/">Voltar</a>
+</body>
+</html>
