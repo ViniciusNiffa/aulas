@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folha de pagamento</title>
+</head>
+
+<body>
+    <h2>Cálculo da folha de pagamento</h2>
+    <!-- Exibir um erro se existir -->
+    {% if erro %}
+        <p style="color: red;">{{ erro }}</p>
+    {% endif %}
+
+    <form action="/calcular" method="post">
+        <label>
+            Valor da hora trabalhada R$
+            <input type="number" step="0.1" name="valorHora" required>
+        </label>
+        <br>
+        <label>
+            Número de horas trabalhadas:
+            <input type="number" step="0.1" name="horasTrabalhadas" required>
+        </label>
+        <br>
+        <label>
+            Desconto INSS %
+            <input type="number" step="0.1" name="desconto" required>
+        </label>
+        <br>
+        <input type="submit" value="Calcular">
+    </form>
+</body>
+
+</html>

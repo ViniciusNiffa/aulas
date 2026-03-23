@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado dos cálculos</title>
+</head>
+<body>
+    <h2>Resultado da folha de pagamento</h2>
+    <p>Valor da hora R$ {{ "%.2f" |format(valor_hora) }}</p>
+    <p>Horas trabalhadas: {{ horas_trabalhadas }}</p>
+    <p>Desconto aplicado: {{ desconto }}</p>
+    <hr>
+    <p>Salário bruto R$ {{ "%.2f" |format(salario_bruto) }}</p>
+    <p>Valor do desconto R$ {{ "%.2f" |format(valor_desconto) }}</p>
+    <p>Salário líquido R$ {{ "%.2f" |format(salario_liquido) }}</p>
+    <br>
+    <a href="/">Voltar</a>
+</body>
+</html>

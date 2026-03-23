@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+</head>
+<body>
+    <h2>Resultado da folha de pagamento</h2>
+    <p>Valor da hora trabalhada R$ {{ valor_hora }}</p>
+    <p>Horas trabalhadas no mês: {{ horas_trabalhadas }}</p>    
+    <hr>
+    <p>Salário bruto R$ {{ salario_bruto }}</p>
+    <p>Alíquota INSS: {{ aliquota }}</p>
+    <p>Desconto INSS R$ {{ desconto_inss }}</p>
+    <p>Desconto vale alimentação R$ {{ desconto_va }}</p>
+    <p>Desconto vale transporte R$ {{ desconto_vt }}</p>
+    <br>
+    <p>Salário líquido R$ {{ salario_liquido }}</p>
+    <br>
+    <a href="/">Voltar</a>
+</body>
+</html>
