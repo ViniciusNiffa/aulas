@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrando os dados</title>
+</head>
+<body>
+    <h2>Mostrando os dados da lista</h2>
+    <p>Lista completa: {{ nomes }}</p>
+    <br>
+    <h2>Percorrendo a lista</h2>
+    {% for name in nomes %}
+        <p>O nome que você digitou é: {{ name }}</p>
+    {% endfor %}
+    <br>
+    <a href="/">Voltar</a>
+</body>
+</html>

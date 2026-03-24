@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema escolar</title>
+</head>
+<body>
+    <h2>Dados do aluno</h2>
+    <p>Nome do aluno: {{ nome }}</p>
+    <p>Turma: {{ turma }}</p>
+    {% for nota in notas %}
+        <p>Nota {{ loop.index }}: {{ nota }}</p>
+    {% endfor %}
+    <p>Média final: {{ "%.2f"|format(media) }}</p>
+    <p>Situação curricular: {{ situacao }}</p>
+</body>
+</html>

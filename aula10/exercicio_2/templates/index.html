@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Array</title>
+</head>
+
+<body>
+    <h2>Armazenando os dados em lista (Array)</h2>
+    <form action="/processar" method="post">
+        <label>
+            Informe o primeiro nome:
+            <input type="text" name="n1" required>
+        </label>
+        <br>
+        <label>
+            Informe o segundo nome:
+            <input type="text" name="n2" required>
+        </label>
+        <br>
+        <label>
+            Informe o terceiro nome:
+            <input type="text" name="n3" required>
+        </label>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" name="limpar" value="Resetar">
+    </form>
+    <hr>
+    <!-- Só mostra o resultado se a lista tiver dados -->
+    {% if nomes %}
+        <p>Lista complet: {{ nomes }}</p>
+        <br>
+        {% for name in nomes %}
+            <p>O nome que você digitou é: {{ name }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+
+</html>
