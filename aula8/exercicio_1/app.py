@@ -12,15 +12,21 @@ def calculo_juros():
     atraso = int(request.form.get("atraso"))
     
     if 1 <= atraso <= 3:
-        juros = 0.05
+        juros_percentual = 0.05
     elif 4 <= atraso <= 9:
-        juros = 0.10
+        juros_percentual = 0.10
     elif atraso >= 10:
-        juros = 0.15
+        juros_percentual = 0.15
+    elif atraso < 0:
+        return "Digite valores válidos!"
     else:
-        juros = "Digite valores válidos"
+        juros_percentual = 0
     
-    total = prestacao * juros
+    if prestacao < 0:
+        return "Digite valores válidos!"
+    
+    juros = prestacao * juros_percentual
+    total = juros + prestacao
 
     return render_template(
         "calcJu.html",

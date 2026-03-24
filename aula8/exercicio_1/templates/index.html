@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculando juros</title>
 </head>
+
 <body>
-    <form action="/calculo_juros">
-        <label>
-            Valor da prestação: <input type="number" name="prestacao">
-        </label>
-        <br>
-        <label>
-            Dias em atraso: <input type="number" name="atraso">
-        </label>
-        <br>
-        <input type="submit" value="enviar">
+    <form action="/calculo_juros" method="post">
+            <label>
+                <p>Valor da prestação:</p> <input type="number" name="prestacao">
+            </label>
+            <br>
+            <label>
+                Dias em atraso: <input type="number" name="atraso">
+            </label>
+            <br>
+            <input type="submit" value="enviar">
     </form>
 </body>
+
 </html>
