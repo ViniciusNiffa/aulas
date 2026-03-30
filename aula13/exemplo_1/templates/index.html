@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folha de pagamento</title>
+</head>
+<body>
+    <h2>Folha de pagamento</h2>
+    <form action="/resultado" method="post">
+        <label>
+            Nome
+            <input type="text" name="nome" required>
+        </label><br>
+        <label>
+            Salário bruto R$
+            <input type="number" step="0.1" name="salario" required>
+        </label><br>
+        <label>
+            Vale alimentação R$
+            <input type="number" step="0.1" name="vale_alimentacao" required>
+        </label><br>
+        <label>
+            Vale transporte R$
+            <input type="number" step="0.1" name="vale_transporte" required>
+        </label><br>
+        <input type="submit" value="Calcular">
+    </form>
+</body>
+</html>

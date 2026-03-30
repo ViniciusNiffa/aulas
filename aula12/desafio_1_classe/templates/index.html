@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcular Dois Valores</title>
+</head>
+<body>
+
+    <h2>Calcular Dois Valores</h2>
+
+    <!-- Formulário envia dados para /resultado -->
+    <form action="/resultado" method="post">
+
+        <!-- Campo primeiro valor -->
+        <label>
+            Informe o primeiro valor
+            <input type="number" step="0.01" name="valor1" required>
+        </label>
+        <br><br>
+
+        <!-- Campo segundo valor -->
+        <label>
+            Informe o segundo valor
+            <input type="number" step="0.01" name="valor2" required>
+        </label>
+        <br><br>
+
+        <!-- Campo operação -->
+        <label>
+            Operação (+ - / *):
+            <input type="text" name="operacao" size="2" required>
+        </label>
+        <br><br>
+
+        <!-- Botão enviar -->
+        <input type="submit" value="Enviar">
+
+    </form>
+
+</body>
+</html>

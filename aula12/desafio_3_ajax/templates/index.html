@@ -1,0 +1,122 @@
+<!DOCTYPE html> <!-- Define documento HTML5 -->
+<html lang="pt-br"> <!-- Define idioma da página -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define codificação UTF-8 -->
+    <title>Calculadora AJAX</title> <!-- Título da aba -->
+</head>
+
+<body>
+
+    <h2>Calculadora Completa (Sem Recarregar)</h2> <!-- Título da página -->
+
+    <!-- Formulário identificado por id -->
+    <form id="formCalculadora">
+
+        <!-- Campo primeiro valor -->
+        <label>
+            Primeiro valor:
+            <input type="number" step="0.01" id="valor1" required>
+        </label>
+
+        <br><br>
+
+        <!-- Campo segundo valor -->
+        <label>
+            Segundo valor:
+            <input type="number" step="0.01" id="valor2" required>
+        </label>
+
+        <br><br>
+
+        <!-- Campo seleção de operação -->
+        <label>
+            Operação:
+            <select id="operacao">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+                <option value="**">**</option>
+                <option value="//">//</option>
+            </select>
+        </label>
+
+        <br><br>
+
+        <!-- Botão de envio -->
+        <button type="submit">Calcular</button>
+
+    </form>
+
+    <h3>Resultado:</h3> <!-- Área do resultado -->
+
+    <!-- Parágrafo onde o resultado será exibido -->
+    <p id="resultado"></p>
+
+    <script>
+        // Seleciona o formulário pelo id
+        const form = document.getElementById("formCalculadora");
+
+        // Adiciona evento quando o formulário for enviado
+        form.addEventListener("submit", function(event) {
+
+            // Impede o comportamento padrão (recarregar página)
+            event.preventDefault();
+
+            // Captura o valor do primeiro campo
+            const valor1 = document.getElementById("valor1").value;
+
+            // Captura o valor do segundo campo
+            const valor2 = document.getElementById("valor2").value;
+
+            // Captura a operação selecionada
+            const operacao = document.getElementById("operacao").value;
+
+            // Envia requisição para o servidor usando fetch
+            fetch("/calcular", {
+
+                // Define método POST
+                method: "POST",
+
+                // Define tipo de conteúdo enviado
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                // Converte dados para JSON
+                body: JSON.stringify({
+                    valor1: valor1,
+                    valor2: valor2,
+                    operacao: operacao
+                })
+
+            })
+
+            // Converte resposta para JSON
+            .then(response => response.json())
+
+            // Recebe os dados retornados
+            .then(data => {
+
+                // Exibe o resultado na página
+                document.getElementById("resultado").innerText =
+                    valor1 + " " + operacao + " " + valor2 + " = " + data.resultado;
+
+            })
+
+            // Caso ocorra erro
+            .catch(error => {
+
+                // Mostra mensagem de erro
+                document.getElementById("resultado").innerText =
+                    "Erro ao calcular.";
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
