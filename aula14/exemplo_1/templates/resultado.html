@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+</head>
+<body>
+    <h2>Resultado da folha de pagamento</h2>
+    <p>Nome: {{ f.nome }}</p>
+    <p>Salário bruto R$ {{ "%2.f"|format(f.salario_bruto) }}</p>
+    <p>INSS R$ {{ "%2.f"|format(f.inss) }}</p>
+    <p>IRRF R$ {{ "%2.f"|format(f.irrf) }}</p>
+    <p>Desconto vale alimentação R$ {{ "%2.f"|format(f.desconto_va) }}</p>
+    <p>Desconto vale transporte R$ {{ "%.2f"|format(f.desconto_vt) }}</p>
+    <p>Salário líquido R$ {{ "%.2f"|format(f.salario_liquido) }}</p>
+    <a href="/">Voltar</a>
+</body>
+</html>
